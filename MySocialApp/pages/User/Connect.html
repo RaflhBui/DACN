@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/User/connect.css">
+    <title>Kết nối người dùng - ConnectPro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Kết nối người dùng</h1>
+        <p id="user-count">Số người dùng đã đăng ký: <span id="registered-users">0</span></p>
+    </header>
+
+    <main>
+        <!--button class="return-button" onclick="window.location.href='/index.html'">Trở về trang chủ</button-->
+        <div class="layout">
+            <div class="sidebar">
+                <div class="sidebar-section">              
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+					<li><a href="/pages/User/Community.html">Community</a></li>
+					<li><a href="/pages/User/Connect.html">Connect</a></li>
+					<li><a href="/pages/User/Chat.html">Chat</a></li>
+                </ul>
+                </div>
+            </div>
+            
+            <section class="user-list">
+                <h2>Danh sách người dùng</h2>
+                <div class="user-cards">
+                    <!-- Example user card -->
+                    <div class="user-card" onclick="openProfileModal('user1')">                        
+                        <h3>User 1</h3>                            
+                        <img src="user1-avatar.png" alt="User 1" class="user-avatar">                                                                                            
+                    </div>
+                    <!-- Add more user cards as needed -->
+                    <div class="user-card" onclick="openProfileModal('user2')">
+                        <h3>User 2</h3>
+                        <img src="user1-avatar.png" alt="User 2" class="user-avatar">                        
+                    </div>
+                    <!-- Add more user cards as needed -->
+                </div>
+            </section>
+        </div>
+        
+        <div id="profile-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeProfileModal()">&times;</span>
+                <h2 id="modal-username">User Profile</h2>
+                <p id="modal-description">Description goes here...</p>
+                <div id="recent-post">Recent Post: <span id="post-content">This is the user's most recent post.</span></div>
+                <div class="modal-icons">
+                    <button onclick="openCommentModal()">💬 Comment</button>
+                    <button>👍 Interaction</button>
+                </div>
+            </div>
+        </div>
+        <div id="comment-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeCommentModal()">&times;</span>
+                <h2>Leave a Comment</h2>
+                <textarea placeholder="Write your comment here..."></textarea>
+                <button onclick="submitComment()">Submit</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ConnectPro. Tất cả quyền được bảo vệ.</p>
+    </footer>
+
+    <script src="/js/User/Connect.js"></script>
+</body>
+</html>

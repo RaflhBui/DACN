@@ -1,0 +1,35 @@
+<!-- pages/Login.html -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập</title>
+    <link rel="stylesheet" href="/css/Login.css">
+</head>
+<body>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    
+    <div class="login-container">
+        <h1 style="text-align: center;">Đăng Nhập</h1>
+        <form id="login-form">
+            <div class="input-group">
+                <label for="username">Tên đăng nhập</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Mật khẩu</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Đăng Nhập</button>
+        </form>
+        <p>Chưa có tài khoản? <a href="/pages/Register.html"><button class="register-button">Đăng ký ngay!</button></a></p>
+        <a href="/index.html"><button type="submit">Trang Chủ</button></a>
+    </div>
+    <script src="/js/Login.js"></script>
+</body>
+</html>

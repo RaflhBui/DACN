@@ -1,0 +1,109 @@
+/* Add this to your Register.css */
+body {
+    font-family: 'Roboto', sans-serif; /* Thay đổi font chữ */
+    background: linear-gradient(135deg, #e0eafc, #cfdef3); /* Nền gradient */
+    animation: backgroundAnimation 10s infinite alternate; /* Hiệu ứng animation cho nền */
+    overflow: hidden; /* Prevent scrollbars from appearing */
+}
+
+.bubbles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; 
+    z-index: -1; 
+}
+
+.bubbles::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 20%, transparent 20%) repeat;
+    background-size: 20px 20px;
+    animation: bubbleAnimation 15s infinite linear; /* Slower bubble animation */
+
+}
+
+@keyframes bubbleAnimation {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+}
+
+.register-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); 
+    border-radius: 15px; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s; 
+    border: 2px solid transparent; 
+    position: relative; 
+    animation: fadeIn 1s ease-in-out; 
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.register-container:hover {
+    transform: scale(1.02); 
+    border: 2px solid #4CAF50;
+}
+
+.input-group {
+    position: relative; 
+}
+
+.input-group i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #4CAF50; /* Icon color */
+}
+
+.input-group input {
+    width: calc(100% - 40px); /* Adjust width for icon */
+    padding: 10px 10px 10px 40px; /* Adjust padding for icon */
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s; /* Thêm hiệu ứng cho box-shadow */
+}
+
+.register-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50; /* Màu nền */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; 
+    margin-top: 20px;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); 
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s, filter 0.3s; 
+
+}
+
+.register-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.7); 
+    filter: brightness(1.1); 
+}
+
+.register-button:active {
+    transform: scale(0.95);
+}
+
+p {
+    text-align: center;
+    font-size: 1.1em;
+    color: #333; 
+}

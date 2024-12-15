@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <!-- Thêm font awesome cho icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>ConnectPro - Mạng Xã Hội Chuyên Nghiệp</title>
+</head>
+<body>
+    <div class="loading-screen">
+        <div class="loading-bar">
+            <span class="loading-text" style="color: aliceblue;">NPT</span>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <h1>ConnectPro</h1>
+            </div>
+            <ul class="main-nav">
+                <li class="nav-links"><a href="#about">Giới thiệu</a></li>
+                <li class="nav-links"><a href="#features">Tính năng</a></li>
+                <li class="nav-links"><a href="#services">Dịch vụ</a></li>
+            </ul>
+            <ul class="main-nav2">
+                <li class="mode-toggle">
+                    <label class="switch">
+                        <input type="checkbox" id="mode-switch" />
+                        <span class="slider">
+                            <i class="fas fa-sun"></i>
+                            <i class="fas fa-moon"></i>
+                        </span>
+                    </label>					
+                </li>
+                <!-- <li class="cta-button"><a href="pages/Login.html">Đăng nhập</a></li> -->
+                <li class="cta-button">
+                    <!-- Hiển thị tên người dùng nếu đã đăng nhập, nếu không thì hiển thị "Đăng nhập" -->
+                    <a id="login-link" href="/pages/Login.html">Đăng nhập</a>
+                    <li class="cta-button" id="logout-btn" style="display:none;">
+                        <a href="#" id="logout-link">Đăng xuất</a>
+                    </li>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Kết nối chuyên nghiệp - Phát triển cộng đồng</h1>
+                <p>Nền tảng kết nối cộng đồng và chuyên gia hàng đầu</p>
+                <div class="cta-group">
+                    <a href="/pages/Register.html" class="cta-primary">Bắt đầu miễn phí</a>
+                    <a href="/pages/Demo.html" class="cta-secondary">Xem demo</a>
+                </div>
+            </div>
+            <div class="hero-background"></div>
+        </section>
+
+        <section id="introduction" class="introduction-section">
+            <h2 style="color: rgb(0, 170, 255);">Giới thiệu về ConnectPro</h2>
+            <div class="introduction-content">
+                <div class="intro-card animate" data-content="Chatting " data-image="chatting.jpg">
+                    <h3>Chatting</h3>
+                    <p>Kết nối và trò chuyện với bạn bè và đồng nghiệp.</p>
+                </div>
+                
+                <div class="intro-card animate" data-content="Kết bạn Content" data-image="ketban.jpg">
+                    <h3>Kết bạn</h3>
+                    <p>Tìm kiếm và kết nối với những người có cùng sở thích.</p>
+                </div>
+                <div class="intro-card animate" data-content="Đăng bài Content" data-image="dangbai.jpg">
+                    <h3>Đăng bài</h3>
+                    <p>Chia sẻ ý tưởng và nội dung với cộng đồng.</p>
+                </div>
+                <div class="intro-details">
+                    <div id="intro-image-container">
+                        <img id="intro-image" src="" alt="Intro Image">
+                    </div>
+                    <div id="intro-description-container">
+                        <h1 id="intro-description"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features-section">
+            <h2>Tính năng nổi bật</h2>
+            <div class="features-grid">
+                <a href="/pages/User/Connect.html" class="connect-pages">
+                    <div class="feature-card">
+                        <i class="fas fa-network-wired"></i>
+                        <h3>Kết nối thông minh</h3>
+                        <p>Gợi ý kết nối dựa trên ngành nghề và mối quan tâm</p>
+                    </div>
+                </a>
+                <a href="/pages/User/Chat.html" class="onl-pages">
+                    <div class="feature-card">
+                        <i class="fas fa-people-carry"></i>
+                        <h3>Trò chuyện trực tuyến</h3>
+                        <p>Xây dựng mối quan hệ bền vững</p>
+                    </div>
+                </a>
+                <a href="/pages/User/Community.html" class="commun-pages">
+                    <div class="feature-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Phát triển cộng đồng</h3>
+                        <p>Góp phần hỗ trợ cộng đồng vững chắc</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="corporate-services">
+            <div class="overlay">
+                <h2>Corporate services</h2>
+            </div>
+        </section>
+
+        <section id="services" class="services-section">
+            <h2>Dịch vụ của chúng tôi</h2>
+            <div class="services-grid">
+                <div class="service-card animate">
+                    <i class="fas fa-users"></i>
+                    <h3>Kết nối chuyên gia</h3>
+                    <p>Chúng tôi giúp bạn kết nối với các chuyên gia hàng đầu trong ngành.</p>
+                </div>
+                <div class="service-card animate">
+                    <i class="fas fa-comments"></i>
+                    <h3>Hỗ trợ 24/7</h3>
+                    <p>Đội ngũ hỗ trợ của chúng tôi luôn sẵn sàng giúp đỡ bạn mọi lúc.</p>
+                </div>
+                <div class="service-card animate">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Phân tích dữ liệu</h3>
+                    <p>Cung cấp các báo cáo và phân tích chi tiết để bạn đưa ra quyết định đúng đắn.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <ul class="device-list">
+                    <li><i class="fas fa-mobile-alt"></i>Mobile Phone</li>
+                    <li><i class="fas fa-desktop"></i>Desktop</li>
+                    <li><i class="fab fa-chrome"></i>Chrome</li>
+                    <li><i class="fas fa-tv"></i>Screen Saver</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 ConnectPro. Tất cả quyền được bảo vệ.</p>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+    
+</body>
+</html>

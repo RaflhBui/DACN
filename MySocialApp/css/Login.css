@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); /* Importing a modern font */
+
+body {
+    background: linear-gradient(135deg, #e0f7fa, #80deea); /* Thêm gradient cho nền */
+    background-color: #e0f7fa; /* Màu nền công nghệ trắng xanh biển */
+    font-family: 'Roboto', sans-serif; /* Use the imported font */
+    display: flex; /* Sử dụng flexbox để căn giữa */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    height: 100vh; /* Chiều cao toàn bộ viewport */
+    margin: 0; /* Bỏ margin mặc định */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Bubble effect */
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6); /* Light bubble color */
+    opacity: 0.6; /* Slightly transparent */
+    animation: float 6s infinite; /* Animation for floating */
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px); /* Move up */
+    }
+    100% {
+        transform: translateY(0); /* Move back down */
+    }
+}
+
+/* Create multiple bubbles */
+.bubble:nth-child(1) {
+    width: 50px;
+    height: 50px;
+    left: 10%;
+    animation-duration: 5s; /* Different duration for variety */
+}
+
+.bubble:nth-child(2) {
+    width: 30px;
+    height: 30px;
+    left: 30%;
+    animation-duration: 7s;
+}
+.bubble:nth-child(3) {
+    width: 40px;
+    height: 40px;
+    left: 50%;
+    animation-duration: 6s;
+}
+
+.bubble:nth-child(4) {
+    width: 20px;
+    height: 20px;
+    left: 70%;
+    animation-duration: 8s;
+}
+
+.bubble:nth-child(5) {
+    width: 60px;
+    height: 60px;
+    left: 90%;
+    animation-duration: 4s;
+}
+
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Màu nền của form với độ trong suốt */
+    border-radius: 20px; /* Đường viền tròn hơn */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Đổ bóng mạnh hơn */
+    padding: 30px; /* Tăng padding */
+    max-width: 400px;
+    width: 100%; 
+    animation: modalIn 0.5s forwards, pulse 2s infinite; 
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+.login-container::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 20px; /* Match the border radius */
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1)); /* Glowing effect */
+    z-index: -1; /* Place behind the container */
+    animation: glow 1.5s infinite alternate; /* Animation for glowing effect */
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+    }
+}
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); } /* Hiệu ứng phồng nhẹ */
+}
+@keyframes modalIn {
+    from { transform: translateY(-20px); opacity: 0; } /* Bắt đầu từ vị trí trên */
+    to { transform: translateY(0); opacity: 1; } /* Kết thúc ở vị trí ban đầu */
+}
+.input-group {
+    margin-bottom: 20px; /* Tăng khoảng cách giữa các input */
+    display: flex; /* Sử dụng flexbox để căn giữa */
+    justify-content: space-between; /* Căn giữa các ô input */
+}
+input {
+    width: 100%;
+    max-width: 300px;
+    background-color: #f9f9f9; /* Màu nền cho input */
+    color: #333; /* Màu chữ trong input */
+    border: 1px solid #ccc; /* Đường viền cho input */
+    border-radius: 5px; /* Bo góc cho input */
+    padding: 10px; /* Thêm padding cho input */
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s; /* Thêm hiệu ứng zoom */
+}
+
+input:focus {
+    border-color: #007bff; /* Đổi màu border khi focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Hiệu ứng bóng khi focus */
+    transform: scale(1.05); /* Hiệu ứng zoom khi focus */
+}
+/* Hiệu ứng làm mờ cho phần còn lại khi input được focus */
+input:focus ~ body {
+    filter: blur(2px); /* Làm mờ phần còn lại */
+}
+
+button {
+    width: 100%;
+    max-width:100%;
+    margin-right: 10px;
+    background-color: #007bff; /* Màu nền cho nút */
+    color: white; /* Màu chữ cho nút */
+    border: none; /* Không có đường viền */
+    border-radius: 5px; /* Bo góc cho nút */
+    padding: 10px 20px; /* Padding cho nút */
+    cursor: pointer; /* Con trỏ khi hover */
+    transition: background-color 0.3s, transform 0.3s; /* Hiệu ứng chuyển tiếp cho màu nền và biến đổi */
+    position: relative;
+}
+button:hover {
+    background-color: #0056b3; /* Đổi màu nền khi hover */
+    transform: scale(1.1); /* Tăng kích thước khi hover */
+    opacity: 0.9; /* Giảm độ trong suốt khi hover */
+}
+/* Căn chỉnh nút đăng nhập với nút đăng ký ngay */
+button .p {
+    text-align: center; /* Căn giữa cho đoạn văn */
+    display: flex;
+    justify-content: space-between; /* Căn giữa các nút */
+    align-items: center;
+}
+
+/* Add this to your Login.css */
+.register-button {
+    background-color: transparent;
+    border: 2px solid #145ac4; /* Change color as needed */
+    color: #426ada; /* Change text color as needed */
+    padding: 10px 20px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.4s;
+}
+
+.register-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    animation: light-animation 1.5s infinite;
+    z-index: 0;
+}
+
+.register-button:hover {
+    color: white; /* Change text color on hover */
+}
+
+.register-button:hover::before {
+    border-color: #4CAF50; /* Change border color on hover */
+}
+
+@keyframes light-animation {
+    0% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #4CAF50; /* Change color as needed */
+    }
+    100% {
+        border-color: transparent;
+    }
+}
